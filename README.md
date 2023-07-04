@@ -75,9 +75,22 @@ email message details.
 
 ![image](https://github.com/itzyezz/Autopsy/assets/105263523/e6cb6325-b038-4a69-81e1-12bf1bbff712)
 
-![image](https://github.com/itzyezz/Autopsy/assets/105263523/47adaec6-46d2-45a1-bd42-076c203e67a1)
+Note: It's using a Python programming library extracted to a temp folder.
 
-The user Viral was tricked by a phishing email into visiting http://192.168.2.192 and running a bit of malware in a file pretending to be the 7-zip compression utility. Also note in the string that 7z.exe was in the Downloads folder, but as you saw, the Downloads folder was empty, so it has been deleted subsequently.
+The user Viral was tricked by a phishing email into visiting http://192.168.2.192 and running a bit of malware in a file pretending to be the 7-zip compression utility. Also, note in the string that 7z.exe was in the Downloads folder, but as you saw, the Downloads folder was empty, so it has been deleted subsequently.
 
-![image](https://github.com/itzyezz/Autopsy/assets/105263523/0511578b-0bf9-4185-ac52-6863c90ebc40)
+![image](https://github.com/itzyezz/Autopsy/assets/105263523/2855aa13-6e97-4fad-9e72-5657d333041e)
 
+UniversalImport.accdb (Microsoft Access database file). All you need to know for this scenario is that it is a sales database of commercial importance.
+
+![image](https://github.com/itzyezz/Autopsy/assets/105263523/2af103a6-e00e-4ad5-aef1-9371c9d88c34)
+
+Notice a whole series of files in a temp folder with the string .7z in the file name.
+![image](https://github.com/itzyezz/Autopsy/assets/105263523/1425facc-5b64-4cb2-adab-46a486a16116)
+
+A multi-file 7-zip archive, originally written to a temp folder—but what does it contain? Notice that the files had been deleted. These results have been carved from unallocated space by the forensics tool.
+![image](https://github.com/itzyezz/Autopsy/assets/105263523/29891083-2880-4fc4-a3ba-56575457e5a2)
+
+Switch back to the Timeline window and examine the prefetch record following the sequence of .7z files.
+
+This invokes 7z.dll and the file UniversalImport.accdb. It looks as though the attacker used a real copy of 7zip to perform the exfiltration, attempting to cover his tracks by deleting files from the disk. Fortunately, the attack wasn’t sophisticated enough to remove evidence of the activity from the file-system journal.
