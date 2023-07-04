@@ -58,7 +58,7 @@ Clearly, exploring the drive folder-by-folder is not going to be an option.
 
 ![image](https://github.com/itzyezz/Autopsy/assets/105263523/9951a4b4-d5a2-4151-8101-09d554470757)
 
-![image](https://github.com/itzyezz/Autopsy/assets/105263523/c4214e47-cd94-4bbd-8ae1-073250b1e90d)
+![image](https://github.com/itzyezz/Autopsy/assets/105263523/8dcc63c3-55df-4994-b38d-c11026660c3f)
 
 ![image](https://github.com/itzyezz/Autopsy/assets/105263523/8007dd11-4570-4349-85b7-881e636832e6)
 
